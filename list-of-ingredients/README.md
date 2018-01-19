@@ -1,24 +1,18 @@
-# README
+# Rails 5.0 API and React Front-End
+Running both servers
+```
+rake start
+```
+Testing production
+```
+rake start:production
+```
+Explanation of rake task
+- foreman will start the front end
+- /client, on port 3000 and the API on port 3001. 
+- It’ll then open the client http://localhost:3000 in your browser.
+- You can access ActiveAdmin via the API, at http://localhost:3001/admin
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Sources
+- Original guide
+  - https://medium.com/superhighfives/a-top-shelf-web-stack-rails-5-api-activeadmin-create-react-app-de5481b7ec0b
