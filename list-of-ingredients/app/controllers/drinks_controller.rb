@@ -3,14 +3,19 @@ class DrinksController < ApplicationController
 
   # GET /drinks
   def index
-    @drinks = Drink.all
-
+    # @drinks = Drink.all
+    @drinks = Drink.select("id, title").all
     render json: @drinks
+    # might need to replace the above with below:
+    render json: @drinks.to_json
+
   end
 
   # GET /drinks/1
   def show
-    render json: @drink
+    # the drinks instance var is set in before_action
+    # render json: @drink
+    render json: @drink.to_json(:include => { :ingredients => { :only => [:id, :description] }})
   end
 
   # POST /drinks
