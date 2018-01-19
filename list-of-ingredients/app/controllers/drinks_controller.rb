@@ -7,7 +7,7 @@ class DrinksController < ApplicationController
     @drinks = Drink.select("id, title").all
     render json: @drinks
     # might need to replace the above with below:
-    render json: @drinks.to_json
+    # render json: @drinks.to_json
 
   end
 
