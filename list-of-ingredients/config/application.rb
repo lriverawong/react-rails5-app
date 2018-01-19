@@ -26,6 +26,9 @@ module ListOfIngredients
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+    # to prevent the scaffold generator breaking from inherited_resources
+    config.app_generators.scaffold_controller = :scaffold_controlle
+    # needed to reinstall flash and cookies for active admin
     config.middleware.use Rack::MethodOverride
     config.middleware.use ActionDispatch::Flash
     config.middleware.use ActionDispatch::Cookies
